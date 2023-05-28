@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Button, Heading } from '@chakra-ui/react'
 import './App.css'
 
 function App() {
@@ -7,10 +7,13 @@ function App() {
 
   return (
     <ChakraProvider>
-      <h1>Hi, I am Ben Kline</h1>
-      <button onClick={() => setCount((count) => count + 1)}>
+      <Heading pb='10' as='h1' size='4xl' noOfLines={2} >Hi, I am Ben Kline</Heading>
+      <Button 
+        colorScheme='blue'
+        variant='outline' 
+        onClick={() => setCount((count) => count + 1)}>
         count is {count}
-      </button>
+      </Button>
     </ChakraProvider>
   )
 }
